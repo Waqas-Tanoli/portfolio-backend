@@ -1,6 +1,7 @@
 import mongoose, { Schema, Document } from "mongoose";
 
 export interface Project extends Document {
+  _id: string;
   title: string;
   description?: string;
   imageUrl?: string;
@@ -11,6 +12,9 @@ export interface Project extends Document {
 
 const projectSchema = new Schema<Project>(
   {
+    _id: {
+      type: String,
+    },
     title: {
       type: String,
       required: true,

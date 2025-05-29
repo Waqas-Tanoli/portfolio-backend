@@ -4,6 +4,7 @@ import cors from "cors";
 import dotenv from "dotenv";
 
 import profileRoutes from "./routes/profile";
+import projectRoutes from "./routes/projects";
 
 dotenv.config();
 
@@ -15,6 +16,7 @@ app.use(express.json());
 
 // Routes
 app.use("/api/profile", profileRoutes);
+app.use("/api/projects", projectRoutes);
 
 // MongoDB connection
 const PORT = process.env.PORT || 5000;
