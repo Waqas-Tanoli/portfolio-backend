@@ -5,7 +5,7 @@ const router = express.Router();
 router.get("/", async (req, res) => {
   const profile = await ProfileModel.findOne();
   res.json(profile);
-  console.log(profile);
+  // console.log(profile);
 });
 
 export default router;

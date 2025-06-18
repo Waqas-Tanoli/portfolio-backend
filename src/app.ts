@@ -5,7 +5,10 @@ import dotenv from "dotenv";
 
 import profileRoutes from "./routes/profile";
 import projectRoutes from "./routes/projects";
-
+import skillRoutes from "./routes/skills";
+import experienceRoutes from "./routes/experience";
+import educationRoutes from "./routes/education";
+import contactRoutes from "./routes/contact";
 dotenv.config();
 
 const app = express();
@@ -17,6 +20,10 @@ app.use(express.json());
 // Routes
 app.use("/api/profile", profileRoutes);
 app.use("/api/projects", projectRoutes);
+app.use("/api/skills", skillRoutes);
+app.use("/api/experience", experienceRoutes);
+app.use("/api/education", educationRoutes);
+app.use("/api/contact", contactRoutes);
 
 // MongoDB connection
 const PORT = process.env.PORT || 5000;
